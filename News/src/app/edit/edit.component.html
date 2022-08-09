@@ -1,0 +1,32 @@
+<form (ngSubmit)="onSubmit()" #f="ngForm">
+  <div class="form-group">
+    <label for="slika">Slika</label>
+    <input
+      class="form-control"
+      id="slika"
+      placeholder="slika"
+      ngModel
+      name="slika"
+    />
+  </div>
+  <div class="form-group">
+    <label for="naslov">Example textarea</label>
+    <textarea
+      class="form-control"
+      id="naslov"
+      ngModel
+      name="naslov"
+      rows="3"
+    ></textarea>
+  </div>
+  <div>
+    <button
+      type="submit"
+      class="btn btn-primary btn-lg"
+      style="padding-left: 2.5rem; padding-right: 2.5rem"
+      (click)="onSubmit()"
+    >
+      Submit
+    </button>
+  </div>
+</form>

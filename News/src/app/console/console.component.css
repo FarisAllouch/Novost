@@ -1,0 +1,32 @@
+img {
+  width: 340px;
+  height: 180px;
+}
+h5 {
+  font-size: 18px;
+  width: 320px;
+  text-align: center;
+}
+.box {
+  margin-left: 50px;
+  margin-top: 120px;
+}
+.divnov {
+  border: 1px solid black;
+  width: fit-content;
+  height: 290px;
+}
+a:hover {
+  color: gray;
+  background-color: transparent;
+  text-decoration: underline;
+  text-decoration: none;
+}
+a {
+  color: black;
+  background-color: transparent;
+  text-decoration: underline;
+}
+.link {
+  text-decoration: none;
+}

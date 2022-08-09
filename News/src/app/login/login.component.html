@@ -1,0 +1,77 @@
+<form (ngSubmit)="onSubmit()" #f="ngForm">
+  <section class="vh-100">
+    <div class="container-fluid h-custom">
+      <div class="row d-flex justify-content-center align-items-center h-100">
+        <div class="col-md-9 col-lg-6 col-xl-5">
+          <img
+            src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-login-form/draw2.webp"
+            class="img-fluid"
+            alt="Sample image"
+          />
+        </div>
+        <div class="col-md-8 col-lg-6 col-xl-4 offset-xl-1">
+          <div>
+            <input
+              type="email"
+              id="email"
+              class="form-control form-control-lg"
+              placeholder="Unesite važeču email adresu"
+              ngModel
+              name="email"
+              required
+              email
+            />
+            <label class="form-label" for="form3Example3">Email adresa</label>
+          </div>
+          <div>
+            <input
+              type="password"
+              id="password"
+              class="form-control form-control-lg"
+              placeholder="Unesite lozinku"
+              ngModel
+              name="password"
+              required
+              password
+            />
+            <label class="form-label" for="form3Example4">Lozinka </label>
+            <p class="secret" [hidden]="da">Ovaj nalog nije postojan!</p>
+          </div>
+
+          <div class="text-center text-lg-start mt-4 pt-2">
+            <button
+              (click)="onLoginout()"
+              type="submit"
+              class="btn btn-primary btn-lg"
+              style="padding-left: 2.5rem; padding-right: 2.5rem"
+              [disabled]="f.valid != true"
+              (click)="OnTestPassword()"
+            >
+              Prijava
+            </button>
+            <button
+              class="btn btn-primary btn-lg"
+              style="
+                padding-left: 2.5rem;
+                padding-right: 2.5rem;
+                margin-left: 40px;
+                background-color: green;
+              "
+              routerLink="/login-page/register"
+            >
+              Registracija
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="d-flex flex-column flex-md-row text-center text-md-start justify-content-between py-4 px-4 px-xl-5 bg-primary"
+    >
+      <div class="text-white mb-3 mb-md-0">
+        Copyright © 2022. Sva prava održana.
+      </div>
+    </div>
+  </section>
+</form>
+<router-outlet></router-outlet>

@@ -1,0 +1,23 @@
+<div>
+  <span *ngFor="let par of HomeNovosti">
+    <span *ngIf="par.id == novostId">
+      <div class="col-md-6 tn-right">
+        <div style="display: flex" class="row">
+          <h1>{{ par.novost }}</h1>
+          <div class="divnov">
+            <div *ngFor="let sli of HomeSlikeNovosti">
+              <img *ngIf="sli.id == par.id" src="{{ sli.slika }}" alt="" />
+            </div>
+
+            <div *ngFor="let hd of HomeDetaljno" class="entry-content">
+              <p *ngIf="par.id == hd.id">
+                {{ hd.tekst }}
+              </p>
+            </div>
+          </div>
+          <router-outlet></router-outlet>
+        </div>
+      </div>
+    </span>
+  </span>
+</div>

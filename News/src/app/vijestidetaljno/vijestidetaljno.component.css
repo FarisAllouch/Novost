@@ -1,0 +1,18 @@
+p {
+  margin-left: 500px;
+  width: 90%;
+  hyphens: manual;
+  font-size: 20px;
+}
+h1 {
+  margin-left: 450px;
+}
+img {
+  margin-left: 625px;
+  height: 400px;
+  width: 600px;
+}
+.divnov {
+  max-width: 100%;
+  margin: auto;
+}

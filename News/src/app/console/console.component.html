@@ -1,0 +1,51 @@
+<h1 class="text-center">Pristup admina</h1>
+<div class="text-center">
+  <div class="divnov">
+    <label for="" class="labelvijest">Napišite naslov za novu objavu: </label>
+    <textarea
+      rows="5"
+      cols="170"
+      id="TITLE"
+      [(ngModel)]="novavijest"
+      maxlength="100"
+    ></textarea>
+    <div class="slikadiv">
+      <label for=""
+        >Postavite sliku za novi sadržaj(slika mora da bude url):
+        <input type="text" [(ngModel)]="slika1" />
+      </label>
+    </div>
+    <div>
+      <label for="">Napisite nesto za detaljno:</label>
+      <textarea
+        name=""
+        id="Deetaljno"
+        cols="200"
+        rows="5"
+        [(ngModel)]="novavijestdetaljno"
+      >
+      </textarea>
+      <button (click)="objavidetaljno()">Objavi</button>
+    </div>
+    <router-outlet></router-outlet>
+  </div>
+</div>
+<div class="container-fluid mt-1">
+  <div class="row mt-3">
+    <div class="col-lg-3 mt-3 mb-3" *ngFor="let nep of HomeNovosti">
+      <button (click)="onDelete(nep.id)">Delete</button>
+      <button click="onEdit()" [routerLink]="['/console/edit/', nep.id]">
+        Edit
+      </button>
+
+      <div class="box" *ngFor="let par of HomeSlikeNovosti">
+        <a>
+          <div *ngIf="par.id == nep.id" class="divnov">
+            <img src="{{ par.slika }}" alt="image" />
+            <h5 class="mt-3 mb-3">{{ nep.novost }}</h5>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>

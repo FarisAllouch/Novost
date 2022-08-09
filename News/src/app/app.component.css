@@ -1,0 +1,12 @@
+#navbarlinks {
+  width: 70%;
+  margin-left: 200px;
+  font-size: large;
+  font-family: sans-serif;
+  font-weight: 500;
+  font-stretch: ultra-expanded;
+  font-variant: small-caps;
+}
+.nav-item {
+  margin: 12px;
+}
